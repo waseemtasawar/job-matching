@@ -15,7 +15,7 @@ const PopularCourses = () => {
         <button className="px-6 py-2 bg-white text-gray-800 rounded-full border border-gray-300 mx-2 hover:bg-orange-100">Personal Development</button>
         <button className="px-6 py-2 bg-white text-gray-800 rounded-full border border-gray-300 mx-2 hover:bg-orange-100">IT - Information Technology</button>
         <button className="px-6 py-2 bg-white text-gray-800 rounded-full border border-gray-300 mx-2 hover:bg-orange-100">HR - Human Resource</button>
-        <button className="px-6 py-2 bg-white text-gray-800 rounded-full border border-gray-300 mx-2 hover:bg-orange-100">Management</button>
+       
       </div>
 
       {/* Courses Scroll */}
