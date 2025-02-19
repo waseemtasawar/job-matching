@@ -6,7 +6,7 @@ import ImageGoogle from '../../../public/google.png'
 import ImageMicrosoft from '../../../public/mircosoft.png'
 const CompanyLogos = () => {
   return (
-    <section className="text-center py-12 bg-white">
+    <section className="text-center py-12 bg-white max-w-7xl mx-auto">
       <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
         Join Most Well Known <span className="text-orange-600">Companies</span> Around The World
       </h2>

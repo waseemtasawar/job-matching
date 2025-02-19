@@ -2,7 +2,7 @@ import React from "react";
 
 const TrendingJobs = () => {
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-orange-50 shadow-md mt-8 rounded-lg">
+    <div className="max-w-7xl mx-auto p-6 bg-orange-50 shadow-md mt-8 rounded-lg ">
       <h3 className="font-bold text-2xl text-gray-800" id="trending-jobs">
         Trending Job Keywords:
       </h3>

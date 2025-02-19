@@ -3,6 +3,11 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import TrendingJobs from "./components/TrendingJobs";
 import CompanyLogos from "./components/CompanyLogos";
+import CategorySection from "./components/CategorySection";
+import CoolPlacesToWork from "./components/CoolPlacesToWork";
+import PopularCourses from "./components/PopularCourses";
+import SubscribeSection from "./components/SubscribeSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +24,11 @@ export default function Home() {
       <HeroSection />
       <TrendingJobs />
       <CompanyLogos/>
+      <CategorySection/>
+      <CoolPlacesToWork/>
+      <PopularCourses/>
+      <SubscribeSection/>
+      <Footer/>
     </div>
   );
 }
