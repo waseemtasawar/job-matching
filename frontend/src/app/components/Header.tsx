@@ -1,8 +1,17 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
+import Login from '../pages/auth/Login';
+import Signup from '../pages/auth/SignUp';
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
+  const [showSignupPopup, setShowSignupPopup] = useState(false);
+
+  const handleClosePopups = () => {
+    setShowLoginPopup(false);
+    setShowSignupPopup(false);
+  };
 
   return (
     <header className="relative flex justify-between items-center p-6 bg-gradient-to-r from-orange-600 to-orange-500 shadow-lg text-white max-w-7xl mx-auto">
@@ -30,16 +39,20 @@ const Header = () => {
         <a href="/guidance" className="hover:text-orange-200 transition-all duration-300" aria-label="Go to Career Guidance Page">
           Career Guidance
         </a>
-        <a href="/login" className="hover:text-orange-200 transition-all duration-300" aria-label="Go to Login Page">
+        <button
+          onClick={() => setShowLoginPopup(true)}
+          className="hover:text-orange-200 transition-all duration-300"
+          aria-label="Open Login Popup"
+        >
           Login
-        </a>
-        <a
-          href="/signup"
+        </button>
+        <button
+          onClick={() => setShowSignupPopup(true)}
           className="bg-white text-orange-600 px-6 py-2 rounded-full hover:bg-orange-100 hover:text-orange-700 transition-all duration-300"
-          aria-label="Go to Sign Up Page"
+          aria-label="Open Signup Popup"
         >
           Sign Up
-        </a>
+        </button>
       </nav>
 
       {/* Mobile Menu Toggle */}
@@ -93,18 +106,26 @@ const Header = () => {
           <a href="/guidance" className="hover:text-orange-200 transition-all duration-300" aria-label="Go to Career Guidance Page">
             Career Guidance
           </a>
-          <a href="/login" className="hover:text-orange-200 transition-all duration-300" aria-label="Go to Login Page">
+          <button
+            onClick={() => setShowLoginPopup(true)}
+            className="hover:text-orange-200 transition-all duration-300"
+            aria-label="Open Login Popup"
+          >
             Login
-          </a>
-          <a
-            href="/signup"
+          </button>
+          <button
+            onClick={() => setShowSignupPopup(true)}
             className="bg-white text-orange-600 px-6 py-2 rounded-full hover:bg-orange-100 hover:text-orange-700 transition-all duration-300"
-            aria-label="Go to Sign Up Page"
+            aria-label="Open Signup Popup"
           >
             Sign Up
-          </a>
+          </button>
         </div>
       )}
+
+      {/* Display the Login or Signup Popup */}
+      {showLoginPopup && <Login onClose={handleClosePopups} />}
+      {showSignupPopup && <Signup onClose={handleClosePopups} />}
     </header>
   );
 };

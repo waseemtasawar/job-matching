@@ -17,6 +17,7 @@ const PopularCourses = () => {
         <button className="px-6 py-2 bg-white text-gray-800 rounded-full border border-gray-300 mx-2 hover:bg-orange-100">HR - Human Resource</button>
        
       </div>
+      
 
       {/* Courses Scroll */}
       <div className="overflow-x-auto whitespace-nowrap">
